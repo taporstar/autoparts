@@ -967,3 +967,83 @@ body.search-active {
 }
 
 /* ... (остальные стили остаются без изменений) ... */
+
+/* ... (существующие стили до конца файла) ... */
+
+/* Затемнение фона при открытии поиска */
+body.search-active {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/full-bg.jpg') no-repeat center/cover;
+    transition: background 0.5s ease;
+}
+
+/* Скрытая строка поиска по умолчанию */
+.search-bar {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.7); /* Полупрозрачный фон */
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Анимация появления строки */
+.search-bar.active {
+    display: flex;
+    animation: slideUp 0.5s ease forwards;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Стили для поля ввода */
+.search-input {
+    flex-grow: 1;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    background: transparent;
+    color: #666; /* Серый текст */
+    font-family: Arial, sans-serif; /* Простой шрифт */
+}
+
+.search-input::placeholder {
+    color: #666; /* Серый текст для placeholder */
+    font-style: normal;
+    font-family: Arial, sans-serif;
+}
+
+/* Стили для кнопки */
+.search-btn {
+    background: #e74c3c;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-btn:hover {
+    background: #c0392b;
+}
+
+/* ... (остальные стили остаются без изменений) ... */

@@ -38,16 +38,18 @@ document.getElementById('close-catalog-modal').addEventListener('click', () => {
     document.getElementById('catalog-modal').style.display = 'none';
 });
 
-// Открытие/закрытие модального окна для "Поиск запчастей"
+// Открытие/закрытие строки поиска
 document.getElementById('search-btn').addEventListener('click', (e) => {
     e.preventDefault();
     document.body.classList.add('search-active'); // Затемнение фона
-    document.getElementById('search-modal').style.display = 'flex';
+    const searchBar = document.getElementById('search-bar');
+    searchBar.classList.add('active'); // Показ строки поиска
 });
 
 document.getElementById('close-search-modal').addEventListener('click', () => {
     document.body.classList.remove('search-active'); // Удаление затемнения
-    document.getElementById('search-modal').style.display = 'none';
+    const searchBar = document.getElementById('search-bar');
+    searchBar.classList.remove('active'); // Скрытие строки поиска
 });
 
 // Открытие/закрытие модального окна для "Корзина"
@@ -70,13 +72,13 @@ document.getElementById('close-contact-modal').addEventListener('click', () => {
     document.getElementById('contact-modal').style.display = 'none';
 });
 
-// Закрытие модалок при клике вне окна
+// Закрытие модалок и строки поиска при клике вне окна
 window.addEventListener('click', (e) => {
     const socialModal = document.getElementById('social-modal');
     const promoModal = document.getElementById('promo-modal');
     const aboutModal = document.getElementById('about-modal');
     const catalogModal = document.getElementById('catalog-modal');
-    const searchModal = document.getElementById('search-modal');
+    const searchBar = document.getElementById('search-bar');
     const cartModal = document.getElementById('cart-modal');
     const contactModal = document.getElementById('contact-modal');
     if (e.target === socialModal) {
@@ -91,9 +93,9 @@ window.addEventListener('click', (e) => {
     if (e.target === catalogModal) {
         catalogModal.style.display = 'none';
     }
-    if (e.target === searchModal) {
-        document.body.classList.remove('search-active'); // Удаление затемнения
-        searchModal.style.display = 'none';
+    if (e.target === searchBar) {
+        document.body.classList.remove('search-active');
+        searchBar.classList.remove('active');
     }
     if (e.target === cartModal) {
         cartModal.style.display = 'none';

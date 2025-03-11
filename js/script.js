@@ -46,7 +46,7 @@ document.getElementById('search-btn').addEventListener('click', (e) => {
     searchBar.classList.add('active'); // Показ строки поиска
 });
 
-document.getElementById('close-search-modal').addEventListener('click', () => {
+document.getElementById('close-search-bar').addEventListener('click', () => {
     document.body.classList.remove('search-active'); // Удаление затемнения
     const searchBar = document.getElementById('search-bar');
     searchBar.classList.remove('active'); // Скрытие строки поиска
@@ -81,6 +81,7 @@ window.addEventListener('click', (e) => {
     const searchBar = document.getElementById('search-bar');
     const cartModal = document.getElementById('cart-modal');
     const contactModal = document.getElementById('contact-modal');
+
     if (e.target === socialModal) {
         socialModal.style.display = 'none';
     }
@@ -104,3 +105,4 @@ window.addEventListener('click', (e) => {
         contactModal.style.display = 'none';
     }
 });
+

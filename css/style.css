@@ -911,3 +911,59 @@ body {
 }
 
 /* ... (остальные стили остаются без изменений) ... */
+/* ... (существующие стили до конца файла) ... */
+
+/* Затемнение фона при открытии поиска */
+body.search-active {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/full-bg.jpg') no-repeat center/cover;
+    transition: background 0.5s ease;
+}
+
+/* Стили для формы поиска */
+.search-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.search-input {
+    width: 80%;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 1.1em;
+    border: 2px solid #e74c3c;
+    border-radius: 25px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.8); /* Прозрачность фона */
+    color: #333;
+    text-align: center;
+}
+
+.search-input::placeholder {
+    color: rgba(231, 76, 60, 0.7); /* Прозрачная надпись */
+    font-style: italic;
+    font-weight: 700;
+}
+
+.search-btn {
+    background: #e74c3c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-btn:hover {
+    background: #c0392b;
+}
+
+/* Анимация появления формы */
+.modal-content {
+    animation: fadeIn 0.5s ease;
+}
+
+/* ... (остальные стили остаются без изменений) ... */

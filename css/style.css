@@ -889,3 +889,25 @@ body {
 }
 
 /* ... (далее все существующие стили остаются без изменений) ... */
+/* ... (существующие стили до конца файла) ... */
+
+/* Стили для списка контактов */
+.contact-info {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1.1em;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info i {
+    color: #e74c3c;
+}
+
+/* ... (остальные стили остаются без изменений) ... */

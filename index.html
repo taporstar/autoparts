@@ -22,14 +22,21 @@
                 <a href="#cart" class="btn nav-btn flip-y"><i class="fas fa-shopping-cart"></i> Корзина</a>
                 <a href="#contact" class="btn nav-btn bounce"><i class="fas fa-phone"></i> Контакты</a>
                 <a href="#" class="btn nav-btn social slide-in" id="social-btn"><i class="fas fa-share-alt"></i> Наши соц. сети</a>
+                <a href="#" class="btn nav-btn promo fade-in" id="promo-btn"><i class="fas fa-star"></i> Акции</a>
+                <a href="#" class="btn nav-btn about zoom-in" id="about-btn"><i class="fas fa-info-circle"></i> О нас</a>
             </nav>
+        </div>
+        <!-- Анимированный заголовок -->
+        <div class="hero-text">
+            <h1 class="fade-in-text">Добро пожаловать в AutoParts!</h1>
+            <p class="fade-in-text delay-1">Всё для вашего автомобиля</p>
         </div>
     </header>
 
-    <!-- Модальное окно -->
+    <!-- Модальное окно для соцсетей -->
     <div class="modal" id="social-modal">
         <div class="modal-content">
-            <span class="close-btn" id="close-modal">×</span>
+            <span class="close-btn" id="close-social-modal">×</span>
             <h2>Наши соц. сети</h2>
             <div class="social-links">
                 <a href="https://t.me/yourtelegram" target="_blank" class="social-link telegram">
@@ -40,6 +47,32 @@
                 </a>
             </div>
         </div>
+    </div>
+
+    <!-- Модальное окно для акций -->
+    <div class="modal" id="promo-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-promo-modal">×</span>
+            <h2>Акции</h2>
+            <p>Скидки до 30% на все запчасти для автомобилей! Только до конца месяца!</p>
+            <a href="#catalog" class="btn modal-btn">Посмотреть каталог</a>
+        </div>
+    </div>
+
+    <!-- Модальное окно для "О нас" -->
+    <div class="modal" id="about-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-about-modal">×</span>
+            <h2>О нас</h2>
+            <p>Мы — AutoParts, ваш надёжный партнёр в мире автозапчастей. Более 10 лет мы поставляем качественные детали для любых автомобилей.</p>
+            <a href="#contact" class="btn modal-btn">Связаться с нами</a>
+        </div>
+    </div>
+
+    <!-- Плавающие иконки -->
+    <div class="floating-icons">
+        <a href="https://t.me/yourtelegram" target="_blank" class="floating-icon telegram"><i class="fab fa-telegram-plane"></i></a>
+        <a href="https://vk.com/yourvk" target="_blank" class="floating-icon vk"><i class="fab fa-vk"></i></a>
     </div>
 
     <script src="js/script.js"></script>

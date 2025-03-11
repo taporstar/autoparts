@@ -976,6 +976,14 @@ body.search-active {
     transition: background 0.5s ease;
 }
 
+/* ... (существующие стили до конца файла) ... */
+
+/* Затемнение фона при открытии поиска */
+body.search-active {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/full-bg.jpg') no-repeat center/cover;
+    transition: background 0.5s ease;
+}
+
 /* Скрытая строка поиска по умолчанию */
 .search-bar {
     display: none;
@@ -993,6 +1001,21 @@ body.search-active {
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    position: relative; /* Для позиционирования крестика */
+}
+
+/* Крестик для закрытия строки поиска */
+.search-bar .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.search-bar .close-btn:hover {
+    color: #e74c3c;
 }
 
 /* Анимация появления строки */

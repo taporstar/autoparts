@@ -344,6 +344,17 @@ body {
         transform: translateY(0) rotate(0deg);
     }
 }
+@keyframes jiggle {
+    0% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-5px) rotate(2deg); }
+    50% { transform: translateY(5px) rotate(-2deg); }
+    75% { transform: translateY(-3px) rotate(1deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+.sign-content.jiggle {
+    animation: jiggle 0.5s ease forwards; /* Анимация длится 0.5s */
+}
 
 /* Чёрные верёвки */
 .sign-content::before,

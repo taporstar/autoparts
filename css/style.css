@@ -492,20 +492,36 @@ body.modal-active {
 }
 
 /* Скрытая строка поиска по умолчанию */
+/* Размытие и строка поиска */
+body.search-active,
+body.modal-active {
+    background: url('../img/full-bg.jpg') no-repeat center/cover;
+    transition: backdrop-filter 0.5s ease;
+}
+
+body.search-active {
+    backdrop-filter: blur(5px);
+}
+
+body.modal-active {
+    backdrop-filter: blur(8px);
+}
+
+/* Скрытая строка поиска по умолчанию */
 .search-bar {
     display: none; /* Гарантируем, что строка скрыта по умолчанию */
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
+    width: 50%; /* Восстанавливаем ширину 50% */
     background: rgba(255, 255, 255, 0.8);
     padding: 10px 20px;
     border-radius: 25px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     align-items: center;
-    justify-content: flex-start; /* Смещаем элементы влево */
+    justify-content: space-between; /* Восстанавливаем равномерное распределение */
     gap: 10px;
 }
 
@@ -563,7 +579,7 @@ body.modal-active {
     cursor: pointer;
     transition: background 0.3s ease;
     white-space: nowrap;
-    margin-left: 10px; /* Сдвигаем кнопку левее на 10px */
+    margin-left: -20px; /* Сдвигаем кнопку левее, чтобы не перекрывать крестик */
 }
 
 .search-btn:hover {
@@ -583,5 +599,6 @@ body.modal-active {
         width: 80%; /* Уменьшаем ширину на мобильных */
     }
 }
+    
     
     

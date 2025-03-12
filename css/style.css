@@ -476,22 +476,12 @@ body {
         height: 80px;
         top: -80px;
     }
-    /* Размытие и строка поиска */
-body.search-active,
-body.modal-active {
-    background: url('../img/full-bg.jpg') no-repeat center/cover;
-    transition: backdrop-filter 0.5s ease;
+    /* Адаптивность для строки поиска */
+    .search-bar {
+        width: 80%; /* Уменьшаем ширину на мобильных */
+    }
 }
 
-body.search-active {
-    backdrop-filter: blur(5px);
-}
-
-body.modal-active {
-    backdrop-filter: blur(8px);
-}
-
-/* Скрытая строка поиска по умолчанию */
 /* Размытие и строка поиска */
 body.search-active,
 body.modal-active {
@@ -514,14 +504,14 @@ body.modal-active {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%; /* Восстанавливаем ширину 50% */
+    width: 50%;
     background: rgba(255, 255, 255, 0.8);
     padding: 10px 20px;
     border-radius: 25px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     align-items: center;
-    justify-content: space-between; /* Восстанавливаем равномерное распределение */
+    justify-content: space-between;
     gap: 10px;
 }
 
@@ -569,6 +559,12 @@ body.modal-active {
     width: 70%;
 }
 
+.search-input::placeholder {
+    color: #666;
+    font-style: normal;
+    font-family: Arial, sans-serif;
+}
+
 /* Стили для кнопки */
 .search-btn {
     background: #e74c3c;
@@ -579,26 +575,8 @@ body.modal-active {
     cursor: pointer;
     transition: background 0.3s ease;
     white-space: nowrap;
-    margin-left: -20px; /* Сдвигаем кнопку левее, чтобы не перекрывать крестик */
 }
 
 .search-btn:hover {
     background: #c0392b;
 }
-
-/* Стили для placeholder */
-.search-input::placeholder {
-    color: #666;
-    font-style: normal;
-    font-family: Arial, sans-serif;
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-    .search-bar {
-        width: 80%; /* Уменьшаем ширину на мобильных */
-    }
-}
-    
-    
-    

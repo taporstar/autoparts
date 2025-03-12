@@ -476,13 +476,7 @@ body {
         height: 80px;
         top: -80px;
     }
-    /* Адаптивность для строки поиска */
-    .search-bar {
-        width: 80%; /* Уменьшаем ширину на мобильных */
-    }
-}
-
-/* Размытие и строка поиска */
+    /* Размытие и строка поиска */
 body.search-active,
 body.modal-active {
     background: url('../img/full-bg.jpg') no-repeat center/cover;
@@ -511,7 +505,7 @@ body.modal-active {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start; /* Смещаем элементы влево */
     gap: 10px;
 }
 
@@ -559,12 +553,6 @@ body.modal-active {
     width: 70%;
 }
 
-.search-input::placeholder {
-    color: #666;
-    font-style: normal;
-    font-family: Arial, sans-serif;
-}
-
 /* Стили для кнопки */
 .search-btn {
     background: #e74c3c;
@@ -575,8 +563,25 @@ body.modal-active {
     cursor: pointer;
     transition: background 0.3s ease;
     white-space: nowrap;
+    margin-left: 10px; /* Сдвигаем кнопку левее на 10px */
 }
 
 .search-btn:hover {
     background: #c0392b;
 }
+
+/* Стили для placeholder */
+.search-input::placeholder {
+    color: #666;
+    font-style: normal;
+    font-family: Arial, sans-serif;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .search-bar {
+        width: 80%; /* Уменьшаем ширину на мобильных */
+    }
+}
+    
+    

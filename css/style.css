@@ -513,7 +513,7 @@ body.search-active {
 }
 
 body.modal-active {
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(5px);
 }
 
 /* Скрытая строка поиска по умолчанию */

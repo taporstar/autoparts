@@ -312,6 +312,7 @@ body {
     transform: translateX(-50%);
     z-index: 2;
     text-align: center;
+    cursor: pointer; /* Указываем, что элемент кликабельный */
 }
 
 .sign-content {

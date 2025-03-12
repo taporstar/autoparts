@@ -930,15 +930,15 @@ body.modal-active {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%; /* Половина экрана */
-    background: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон */
-    padding: 10px;
-    border-radius: 25px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 50%; /* Половина экрана, как на скриншоте */
+    background: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон, как на скриншоте */
+    padding: 10px 20px; /* Немного больше отступов для естественного вида */
+    border-radius: 25px; /* Закругление, как на скриншоте */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Лёгкая тень */
     z-index: 1000; /* Выше всех элементов */
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between; /* Распределяем элементы равномерно */
     gap: 10px;
 }
 
@@ -981,7 +981,7 @@ body.modal-active {
     border: none;
     outline: none;
     background: transparent;
-    color: #666; /* Серый текст */
+    color: #666; /* Серый текст, как на скриншоте */
     font-family: Arial, sans-serif; /* Простой шрифт */
     width: 70%; /* Достаточно места для текста */
 }
@@ -992,17 +992,24 @@ body.modal-active {
     font-family: Arial, sans-serif;
 }
 
+.search-input::placeholder {
+    color: #666; /* Серый текст для placeholder */
+    font-style: normal;
+    font-family: Arial, sans-serif;
+}
+
 /* Стили для кнопки */
 .search-btn {
-    background: #e74c3c;
+    background: #e74c3c; /* Красный фон, как на скриншоте */
     color: #fff;
     padding: 8px 15px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
     transition: background 0.3s ease;
+    white-space: nowrap; /* Предотвращаем перенос текста */
 }
 
 .search-btn:hover {
-    background: #c0392b;
+    background: #c0392b; /* Более тёмный красный при наведении */
 }

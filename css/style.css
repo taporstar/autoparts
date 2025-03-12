@@ -265,13 +265,6 @@ body {
     to { opacity: 1; transform: scale(1); }
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
-    .search-bar {
-        width: 80%; /* Уменьшаем ширину на мобильных */
-    }
-}
-
 .close-btn {
     position: absolute;
     top: 10px;
@@ -312,7 +305,7 @@ body {
     transform: translateX(-50%);
     z-index: 2;
     text-align: center;
-    cursor: pointer; /* Указываем, что элемент кликабельный */
+    cursor: pointer;
 }
 
 .sign-content {
@@ -327,7 +320,7 @@ body {
     animation: fallAndSwing 2s ease forwards;
 }
 
-/* Анимация падения и качания */
+/* Анимация падения и качания при загрузке */
 @keyframes fallAndSwing {
     0% {
         transform: translateY(-100px) rotate(0deg);
@@ -344,6 +337,8 @@ body {
         transform: translateY(0) rotate(0deg);
     }
 }
+
+/* Анимация дёрганья при клике */
 @keyframes jiggle {
     0% { transform: translateY(0) rotate(0deg); }
     25% { transform: translateY(-5px) rotate(2deg); }
@@ -353,7 +348,7 @@ body {
 }
 
 .sign-content.jiggle {
-    animation: jiggle 0.5s ease forwards; /* Анимация длится 0.5s */
+    animation: jiggle 0.5s ease forwards;
 }
 
 /* Чёрные верёвки */
@@ -495,10 +490,6 @@ body {
         height: 80px;
         top: -80px;
     }
-    /* Адаптивность для строки поиска */
-    .search-bar {
-        width: 80%; /* Уменьшаем ширину на мобильных */
-    }
 }
 
 /* Размытие и строка поиска */
@@ -518,7 +509,7 @@ body.modal-active {
 
 /* Скрытая строка поиска по умолчанию */
 .search-bar {
-    display: none; /* Гарантируем, что строка скрыта по умолчанию */
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -578,12 +569,6 @@ body.modal-active {
     width: 70%;
 }
 
-.search-input::placeholder {
-    color: #666;
-    font-style: normal;
-    font-family: Arial, sans-serif;
-}
-
 /* Стили для кнопки */
 .search-btn {
     background: #e74c3c;
@@ -594,8 +579,23 @@ body.modal-active {
     cursor: pointer;
     transition: background 0.3s ease;
     white-space: nowrap;
+    margin-left: -20px;
 }
 
 .search-btn:hover {
     background: #c0392b;
+}
+
+/* Стили для placeholder */
+.search-input::placeholder {
+    color: #666;
+    font-style: normal;
+    font-family: Arial, sans-serif;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .search-bar {
+        width: 80%;
+    }
 }

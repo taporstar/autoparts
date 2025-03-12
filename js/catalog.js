@@ -1,24 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const slides = document.querySelectorAll('.slide');
-    let currentSlide = 0;
+    const puzzlePieces = document.querySelectorAll('.puzzle-piece');
+    const puzzle = document.getElementById('puzzle');
 
-    // Функция для смены слайдов
-    function showNextSlide() {
-        slides[currentSlide].classList.remove('active');
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add('active');
-    }
-
-    // Показываем первый слайд
-    slides[currentSlide].classList.add('active');
-
-    // Смена слайдов каждые 2 секунды
-    let slideInterval = setInterval(showNextSlide, 2000);
-
-    // После последнего слайда останавливаем слайдшоу
+    // Задержка перед началом сборки (например, 1 секунда)
     setTimeout(() => {
-        clearInterval(slideInterval);
-        document.getElementById('slideshow').style.display = 'none'; // Скрываем слайдшоу
+        puzzlePieces.forEach(piece => {
+            piece.classList.add('assembled'); // Запускаем анимацию сборки
+        });
+    }, 1000);
+
+    // После сборки (1.5s анимация + 1s задержка = 2.5s) скрываем пазл и устанавливаем фон
+    setTimeout(() => {
+        puzzle.style.display = 'none'; // Скрываем пазл
         document.body.style.backgroundImage = "url('img/final-bg.jpg')"; // Устанавливаем итоговую картинку
-    }, slides.length * 2000); // Время = количество слайдов * 2 секунды
+    }, 2500);
 });

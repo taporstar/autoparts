@@ -265,19 +265,19 @@ body {
     to { opacity: 1; transform: scale(1); }
 }
 
-.close-btn {
+.search-bar .close-btn {
     position: absolute;
-    top: 10px;
+    top: 8px; /* Немного ниже, чтобы соответствовать скриншоту */
     right: 15px;
-    font-size: 24px;
+    font-size: 18px; /* Чуть меньше, чтобы не доминировать */
     cursor: pointer;
-    color: #333;
+    color: #666; /* Серый, как на скриншоте */
+    font-weight: bold;
 }
 
-.close-btn:hover {
-    color: #e74c3c;
+.search-bar .close-btn:hover {
+    color: #e74c3c; /* Красный при наведении */
 }
-
 .social-links {
     margin-top: 20px;
     display: flex;

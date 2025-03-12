@@ -136,5 +136,3 @@ window.addEventListener('click', (e) => {
         contactModal.style.display = 'none';
     }
 });
-
-
